@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:args/args.dart';
+import 'package:lcov_parser/src/parse_line.dart';
 
 void main(List<String> args) async {
   final parser = ArgParser();
@@ -16,7 +17,14 @@ void main(List<String> args) async {
   try {
     final stringFile = await File(file).readAsString();
     final lines = stringFile.split('\n');
-    print(lines);
+    for (var line in lines) {
+      if (ParseLine.isEndOfRecord(line)) {
+        print('fim da linha man');
+      } else {
+        final lineParsed = ParseLine.parse(line);
+        print(lineParsed.type);
+      }
+    }
   } catch (e) {
     print(e);
   }
