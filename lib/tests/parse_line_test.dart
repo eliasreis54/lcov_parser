@@ -1,3 +1,4 @@
+import 'package:lcov_parser/src/models/enum.dart';
 import 'package:lcov_parser/src/parse_line.dart';
 import 'package:test/test.dart';
 
@@ -36,6 +37,6 @@ void main() {
     final parsed = ParseLine.parse(line);
 
     expect(parsed.type, LineType.FN);
-    expect(parsed.data, '12');
+    expect(parsed.data, ['12']);
   });
 }

@@ -1,8 +1,8 @@
 class Branches {
-  final int line;
-  final int block;
-  final int branch;
-  final int taken;
+  int line;
+  int block;
+  int branch;
+  int taken;
 
   Branches({
     this.line,
@@ -13,9 +13,9 @@ class Branches {
 }
 
 class LcovBranchesDetails {
-  final int found;
-  final int hit;
-  final List<Branches> details;
+  int found;
+  int hit;
+  List<Branches> details;
 
   LcovBranchesDetails({
     this.found,
