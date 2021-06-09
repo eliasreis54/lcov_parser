@@ -24,7 +24,7 @@ class Transformer {
       case LineType.FNDA:
         final hit = line.data[0];
         final name = line.data[1].toString();
-        record.functions.details.map((fn) {
+        record.functions.details.forEach((fn) {
           if (fn.name == name) {
             fn.hit = int.parse(hit);
           }
@@ -38,9 +38,9 @@ class Transformer {
         break;
       case LineType.BRDA:
         final ln = int.parse(line.data[0]);
-        final block = int.parse(line.data[0]);
-        final branch = int.parse(line.data[0]);
-        final taken = line.data[0].toString();
+        final block = int.parse(line.data[1]);
+        final branch = int.parse(line.data[2]);
+        final taken = line.data[3].toString();
         record.branches.details.add(
           Branches(
             line: ln,

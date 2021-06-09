@@ -1,4 +1,5 @@
 import 'package:lcov_parser/src/models/enum.dart';
+import 'package:lcov_parser/src/models/functions.dart';
 import 'package:lcov_parser/src/models/line.dart';
 import 'package:lcov_parser/src/models/record.dart';
 import 'package:lcov_parser/src/transformer.dart';
@@ -41,8 +42,25 @@ void main() {
     expect(record.functions.details.length, 1);
   });
 
-  // TODO: implement this
-  test('Should transform LineType.FNDA', () {}, skip: true);
+  test('Should transform LineType.FNDA', () {
+    final fnOne = ['1', 'fn'];
+    final lineOne = Line(type: LineType.FNDA, data: fnOne);
+    final record = Record.empty();
+
+    record.functions.details.add(
+      Functions(hit: 0, name: fnOne[1]),
+    );
+
+    Transformer.transform(record, lineOne);
+
+    expect(record.functions.details[0].hit, 1);
+
+    final fnTwo = ['2', 'fnTwo'];
+    final lineTwo = Line(type: LineType.FNDA, data: fnTwo);
+    Transformer.transform(record, lineTwo);
+
+    expect(record.functions.details[0].hit, 1);
+  });
 
   test('Should transform LineType.FNF', () {
     final line = Line(type: LineType.FNF, data: data);
@@ -66,8 +84,29 @@ void main() {
     expect(record.functions.hit, 1);
   });
 
-  // TODO: implement this
-  test('Should transform LineType.BRDA', () {}, skip: true);
+  test('Should transform LineType.BRDA', () {
+    final fnOne = ['1', '2', '3', '-'];
+    final lineOne = Line(type: LineType.BRDA, data: fnOne);
+    final record = Record.empty();
+
+    expect(record.branches.details, []);
+
+    Transformer.transform(record, lineOne);
+
+    expect(record.branches.details[0].line, 1);
+    expect(record.branches.details[0].block, 2);
+    expect(record.branches.details[0].branch, 3);
+    expect(record.branches.details[0].taken, 0);
+
+    final fnTwo = ['4', '5', '6', '7'];
+    final lineTwo = Line(type: LineType.BRDA, data: fnTwo);
+
+    Transformer.transform(record, lineTwo);
+    expect(record.branches.details[1].line, 4);
+    expect(record.branches.details[1].block, 5);
+    expect(record.branches.details[1].branch, 6);
+    expect(record.branches.details[1].taken, 7);
+  });
 
   test('Should transform LineType.BRF', () {
     final line = Line(type: LineType.BRF, data: data);
