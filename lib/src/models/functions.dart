@@ -11,9 +11,9 @@ class Functions {
 }
 
 class LcovFunctionDetails {
-  final int found;
-  final int hit;
-  final List<Functions> details;
+  int found;
+  int hit;
+  List<Functions> details;
 
   LcovFunctionDetails({
     this.found,
