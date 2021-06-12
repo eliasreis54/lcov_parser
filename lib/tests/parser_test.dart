@@ -6,15 +6,6 @@ import 'package:path/path.dart' as p;
 import 'package:test/test.dart';
 
 void main() {
-  test('Should throw [FileMustBeProvided] when no file is provided', () {
-    expectLater(
-      Parser.parse(null),
-      throwsA(
-        TypeMatcher<FileMustBeProvided>(),
-      ),
-    );
-  });
-
   test('Should throw [FileMustBeProvided] when no file is empty', () {
     expectLater(
       Parser.parse(''),

@@ -3,11 +3,11 @@ import 'package:lcov_parser/src/models/functions.dart';
 import 'package:lcov_parser/src/models/lines.dart';
 
 class Record {
-  String title;
-  String file;
-  LcovFunctionDetails functions;
-  LcovBranchesDetails branches;
-  LcovLinesDetails lines;
+  String? title;
+  String? file;
+  LcovFunctionDetails? functions;
+  LcovBranchesDetails? branches;
+  LcovLinesDetails? lines;
 
   Record({
     this.title,

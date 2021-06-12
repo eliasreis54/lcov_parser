@@ -1,6 +1,6 @@
 class Lines {
-  int line;
-  int hit;
+  int? line;
+  int? hit;
 
   Lines({
     this.line,
@@ -9,9 +9,9 @@ class Lines {
 }
 
 class LcovLinesDetails {
-  int found;
-  int hit;
-  List<Lines> details;
+  int? found;
+  int? hit;
+  List<Lines>? details;
 
   LcovLinesDetails({
     this.found,

@@ -9,8 +9,8 @@ class Parser {
   static Future<List<Record>> parse(String filePath) async {
     List<Record> records;
     records = [];
-    if (filePath == null || filePath.isEmpty) {
-      return throw FileMustBeProvided();
+    if (filePath.isEmpty) {
+      return throw FileMustBeProvided().errMsg();
     }
     final stringFile = await File(filePath).readAsString();
     final lines = stringFile.split('\n');
