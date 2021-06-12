@@ -10,7 +10,7 @@ class Parser {
     List<Record> records;
     records = [];
     if (filePath.isEmpty) {
-      return throw FileMustBeProvided().errMsg();
+      return throw FileMustBeProvided();
     }
     final stringFile = await File(filePath).readAsString();
     final lines = stringFile.split('\n');
