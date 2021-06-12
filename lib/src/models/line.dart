@@ -5,7 +5,7 @@ class Line {
   List<String> data;
 
   Line({
-    this.type,
-    this.data,
+    required this.type,
+    required this.data,
   });
 }
