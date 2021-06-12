@@ -1,3 +1,5 @@
-## 1.0.0
+## 0.1.0
 
-- Initial version, created by Stagehand
+- Parse lcov info from lines
+- Parse lcov info from branches
+- Parse lcov info from functions
