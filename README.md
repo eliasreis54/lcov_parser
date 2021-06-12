@@ -8,7 +8,7 @@ This implementation in dart translate de lcov format to couple of classes we can
 
 ### How to use
 
-To use it is very simples, this package exports the `model` of the record and the `parser` class, and you will receive from the return of the parser is a list of record. 
+To use it is very simple, this package exports the `model` of the record and the `parser` class, and you will receive from the return of the parser is a list of record. 
 As you can see in the code below
 
 ```
