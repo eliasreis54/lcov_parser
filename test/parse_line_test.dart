@@ -16,7 +16,6 @@ void main() {
     expect(toLineType('DA'), LineType.DA);
     expect(toLineType('LF'), LineType.LF);
     expect(toLineType('LH'), LineType.LH);
-    expect(toLineType('LL'), null);
   });
 
   test('Should have the correct end of record', () {

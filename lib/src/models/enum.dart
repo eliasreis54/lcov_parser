@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart' show IterableExtension;
+
 enum LineType {
   TN,
   SF,
@@ -16,6 +18,5 @@ enum LineType {
 LineType toLineType(String stringType) {
   return LineType.values.firstWhere(
     (type) => type.toString() == 'LineType.$stringType',
-    orElse: () => null,
   );
 }

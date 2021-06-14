@@ -1,7 +1,7 @@
 class Functions {
-  String name;
-  int line;
-  int hit;
+  String? name;
+  int? line;
+  int? hit;
 
   Functions({
     this.name,
@@ -11,9 +11,9 @@ class Functions {
 }
 
 class LcovFunctionDetails {
-  int found;
-  int hit;
-  List<Functions> details;
+  int? found;
+  int? hit;
+  List<Functions>? details;
 
   LcovFunctionDetails({
     this.found,

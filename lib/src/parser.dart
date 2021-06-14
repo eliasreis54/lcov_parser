@@ -9,7 +9,7 @@ class Parser {
   static Future<List<Record>> parse(String filePath) async {
     List<Record> records;
     records = [];
-    if (filePath == null || filePath.isEmpty) {
+    if (filePath.isEmpty) {
       return throw FileMustBeProvided();
     }
     final stringFile = await File(filePath).readAsString();
