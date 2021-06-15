@@ -1,3 +1,7 @@
+## 0.1.1
+
+- Improve project structure
+
 ## 0.1.0
 
 - Parse lcov info from lines
