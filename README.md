@@ -1,4 +1,5 @@
 # Lcov parser
+[![Dart](https://github.com/eliasreis54/lcov_parser/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/eliasreis54/lcov_parser/actions/workflows/main.yml)
 
 A simple dart implementation to parser lcov file.
 
@@ -20,7 +21,7 @@ void main() async {
 }
 ```
 
-You also will find a script example in the `main.dart` file.
+You also will find a script example in the `example/main.dart` file.
 
 ### How to contribute with the project.
 
