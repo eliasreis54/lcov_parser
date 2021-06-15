@@ -1,5 +1,3 @@
-import 'package:collection/collection.dart' show IterableExtension;
-
 enum LineType {
   TN,
   SF,

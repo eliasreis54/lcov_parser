@@ -58,9 +58,8 @@ void main() {
     final fnTwo = ['2', 'fnTwo'];
     final lineTwo = Line(type: LineType.FNDA, data: fnTwo);
     Transformer.transform(record, lineTwo);
-    
-    expect(record.functions!.details![0].hit, 1);
 
+    expect(record.functions!.details![0].hit, 1);
   });
 
   test('Should transform LineType.FNF', () {
@@ -72,7 +71,6 @@ void main() {
     Transformer.transform(record, line);
 
     expect(record.functions!.found, 1);
-
   });
 
   test('Should transform LineType.FHN', () {
