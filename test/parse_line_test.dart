@@ -9,7 +9,7 @@ void main() {
     expect(toLineType('FN'), LineType.FN);
     expect(toLineType('FNDA'), LineType.FNDA);
     expect(toLineType('FNF'), LineType.FNF);
-    expect(toLineType('FHN'), LineType.FHN);
+    expect(toLineType('FNH'), LineType.FNH);
     expect(toLineType('BRDA'), LineType.BRDA);
     expect(toLineType('BRF'), LineType.BRF);
     expect(toLineType('BRH'), LineType.BRH);
