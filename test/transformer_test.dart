@@ -74,7 +74,7 @@ void main() {
   });
 
   test('Should transform LineType.FHN', () {
-    final line = Line(type: LineType.FHN, data: data);
+    final line = Line(type: LineType.FNH, data: data);
     final record = Record.empty();
 
     expect(record.functions!.hit, null);

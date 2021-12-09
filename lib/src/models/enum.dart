@@ -4,7 +4,7 @@ enum LineType {
   FN,
   FNDA,
   FNF,
-  FHN,
+  FNH,
   BRDA,
   BRF,
   BRH,
