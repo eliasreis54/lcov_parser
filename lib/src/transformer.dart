@@ -33,7 +33,7 @@ class Transformer {
       case LineType.FNF:
         record.functions!.found = int.parse(line.data[0]);
         break;
-      case LineType.FHN:
+      case LineType.FNH:
         record.functions!.hit = int.parse(line.data[0]);
         break;
       case LineType.BRDA:
