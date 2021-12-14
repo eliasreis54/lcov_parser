@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Fix typo for number of functions hits
+
 ## 0.1.1
 
 - Improve project structure
