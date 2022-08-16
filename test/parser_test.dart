@@ -17,7 +17,7 @@ void main() {
 
   test('Should return a list of Records when parse success', () async {
     final file =
-        p.join(Directory.current.absolute.path, 'lib', 'fixures', 'lcov.info');
+        p.join(Directory.current.absolute.path, 'test', 'fixtures', 'lcov.info');
 
     final records = await Parser.parse(file);
     expect(records.length, 19);
