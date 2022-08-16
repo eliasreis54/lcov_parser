@@ -38,7 +38,8 @@ void main() {
     ];
 
     final records = Parser.parseLines(lines);
-    expect(records.length, 1);
-    expect(records.single, 1);
+    expect(records.single.lines?.details?.length, equals(6));
+    expect(records.single.lines?.found, equals(6));
+    expect(records.single.lines?.hit, equals(6));
   });
 }
