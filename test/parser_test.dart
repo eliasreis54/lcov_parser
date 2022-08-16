@@ -22,4 +22,23 @@ void main() {
     final records = await Parser.parse(file);
     expect(records.length, 19);
   });
+
+  test('parseLines() can be called independently', () async {
+    final lines = [
+      'SF:lib/src/interceptors/app_version_interceptor.dart',
+      'DA:6,1',
+      'DA:11,1',
+      'DA:13,2',
+      'DA:14,3',
+      'DA:15,1',
+      'DA:19,1',
+      'LF:6',
+      'LH:6',
+      'end_of_record',
+    ];
+
+    final records = Parser.parseLines(lines);
+    expect(records.length, 1);
+    expect(records.single, 1);
+  });
 }
