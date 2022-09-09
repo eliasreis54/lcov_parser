@@ -17,9 +17,29 @@ void main() {
 
   test('Should return a list of Records when parse success', () async {
     final file =
-        p.join(Directory.current.absolute.path, 'lib', 'fixures', 'lcov.info');
+        p.join(Directory.current.absolute.path, 'test', 'fixtures', 'lcov.info');
 
     final records = await Parser.parse(file);
     expect(records.length, 19);
+  });
+
+  test('parseLines() can be called independently', () async {
+    final lines = [
+      'SF:lib/src/interceptors/app_version_interceptor.dart',
+      'DA:6,1',
+      'DA:11,1',
+      'DA:13,2',
+      'DA:14,3',
+      'DA:15,1',
+      'DA:19,1',
+      'LF:6',
+      'LH:6',
+      'end_of_record',
+    ];
+
+    final records = Parser.parseLines(lines);
+    expect(records.single.lines?.details?.length, equals(6));
+    expect(records.single.lines?.found, equals(6));
+    expect(records.single.lines?.hit, equals(6));
   });
 }
