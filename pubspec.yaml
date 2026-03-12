@@ -1,5 +1,5 @@
 name: lcov_parser
-description: A simple command-line application. With this package you will get a list of records of lcov.info file.
+description: A Dart package that parses LCOV coverage files into structured records, providing easy access to line, branch, and function coverage data.
 version: 0.1.3
 homepage: https://github.com/eliasreis54/lcov_parser
 
